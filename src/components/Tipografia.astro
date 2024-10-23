@@ -1,0 +1,308 @@
+---
+import Dropdw from "../icons/Dropdw.astro";
+import { fontfamily } from "../const/fontfamily";
+import { fontsize } from "../const/fontsize";
+import { fontsmoothing } from "../const/fontsmoothing";
+import { fontstyle } from "../const/fontstyle";
+import { fontweight } from "../const/fontweight";
+import { fontnumeric } from "../const/fontnumeric";
+import { letterspacing } from "../const/letterspacing";
+import { lineheight } from "../const/lineheight";
+import { linestyle } from "../const/linestyle";
+import { liststyleposition } from "../const/liststyleposition";
+import { textalign } from "../const/textalign";
+import { textcolor } from "../const/textcolor";
+import { textdecoration } from "../const/textdecoration";
+import { textdecorationstyle } from "../const/textdecorationstyle";
+import { textdecorationthickness } from "../const/textdecorationthickness";
+import { textunderlineoffset } from "../const/textunderlineoffset";
+import { texttransform } from "../const/texttransform";
+import { textoverflow } from "../const/textoverflow";
+import { textindent } from "../const/textindent";
+import { verticalalign } from "../const/verticalalign";
+import { whitespace } from "../const/whitespace";
+import { wordbreak } from "../const/wordbreak";
+import { content } from "../const/content";
+---
+
+<div class="p-4 sm:ml-64">
+    <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
+        <div class="grid grid-cols-4 gap-4 mb-4">
+            
+            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                    <option disabled selected value="">Font Family</option>
+                    {
+                        fontfamily.map((font) => {
+                            return <option value={font}>{font}</option>
+                        })
+                    }
+                </select>
+            </div>
+
+            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                    <option disabled selected value="">Font Size</option>
+                    {
+                        fontsize.map((font) => {
+                            return <option class={font} value={font}>{font}</option>
+                        })
+                    }
+                </select>
+            </div>
+
+
+            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                    <option disabled selected value="">Font Smoothing</option>
+                    {
+                        fontsmoothing.map((font) => {
+                            return <option class={font} value={font}>{font}</option>
+                        })
+                    }
+                </select>
+            </div>
+
+            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                    <option disabled selected value="">Font Style</option>
+                    {
+                        fontstyle.map((font) => {
+                            return <option class={font} value={font}>{font}</option>
+                        })
+                    }
+                </select>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-4 gap-4 mb-4">
+            
+        <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+            <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                <option disabled selected value="">Font Weight</option>
+                {
+                    fontweight.map((font) => {
+                        return <option class={font} value={font}>{font}</option>
+                    })
+                }
+            </select>
+        </div>
+
+        <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+            <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                <option disabled selected value="">Font Variant Numeric</option>
+                {
+                    fontnumeric.map((font) => {
+                        return <option class={font} value={font}>{font}</option>
+                    })
+                }
+            </select>
+        </div>
+
+        <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+            <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                <option disabled selected value="">Letter Spacing</option>
+                {
+                    letterspacing.map((font) => {
+                        return <option class={font} value={font}>{font}</option>
+                    })
+                }
+            </select>
+        </div>
+
+        <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+            <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                <option disabled selected value="">Line Height</option>
+                {
+                    lineheight.map((font) => {
+                        return <option class={font} value={font}>{font}</option>
+                    })
+                }
+            </select>
+        </div>
+        </div>
+
+        <div class="grid grid-cols-4 gap-4 mb-4">
+            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                    <option disabled selected value="">List Style</option>
+                    {
+                        linestyle.map((font) => {
+                            return <option class={font} value={font}>{font}</option>
+                        })
+                    }
+                </select>
+            </div>
+    
+            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                    <option disabled selected value="">List Style Position</option>
+                    {
+                        liststyleposition.map((font) => {
+                            return <option class={font} value={font}>{font}</option>
+                        })
+                    }
+                </select>
+            </div>
+    
+            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                    <option disabled selected value="">Text Align</option>
+                    {
+                        textalign.map((font) => {
+                            return <option class={font} value={font}>{font}</option>
+                        })
+                    }
+                </select>
+            </div>
+    
+            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                    <option disabled selected value="">Text Color</option>
+                    {
+                        textcolor.map((font) => {
+                            return <option class={font} value={font}>{font}</option>
+                        })
+                    }
+                </select>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-4 gap-4 mb-4">
+            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                    <option disabled selected value="">Text Decoration</option>
+                    {
+                        textdecoration.map((font) => {
+                            return <option class={font} value={font}>{font}</option>
+                        })
+                    }
+                </select>
+            </div>
+    
+            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                    <option disabled selected value="">Text Decoration Style</option>
+                    {
+                        textdecorationstyle.map((font) => {
+                            return <option class={font} value={font}>{font}</option>
+                        })
+                    }
+                </select>
+            </div>
+    
+            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                    <option disabled selected value="">Text Decoration Thickness</option>
+                    {
+                        textdecorationthickness.map((font) => {
+                            return <option class={font} value={font}>{font}</option>
+                        })
+                    }
+                </select>
+            </div>
+    
+            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                    <option disabled selected value="">Text Underline Offset</option>
+                    {
+                        textunderlineoffset.map((font) => {
+                            return <option class={font} value={font}>{font}</option>
+                        })
+                    }
+                </select>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-4 gap-4 mb-4">
+            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                    <option disabled selected value="">Text Transform</option>
+                    {
+                        texttransform.map((font) => {
+                            return <option class={font} value={font}>{font}</option>
+                        })
+                    }
+                </select>
+            </div>
+    
+            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                    <option disabled selected value="">Text Overflow</option>
+                    {
+                        textoverflow.map((font) => {
+                            return <option class={font} value={font}>{font}</option>
+                        })
+                    }
+                </select>
+            </div>
+    
+            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                    <option disabled selected value="">Text Indent</option>
+                    {
+                        textindent.map((font) => {
+                            return <option class={font} value={font}>{font}</option>
+                        })
+                    }
+                </select>
+            </div>
+    
+            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                    <option disabled selected value="">Vertical Align</option>
+                    {
+                        verticalalign.map((font) => {
+                            return <option class={font} value={font}>{font}</option>
+                        })
+                    }
+                </select>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-4 gap-4 mb-4">
+            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                    <option disabled selected value="">White Space</option>
+                    {
+                        whitespace.map((font) => {
+                            return <option class={font} value={font}>{font}</option>
+                        })
+                    }
+                </select>
+            </div>
+    
+            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                    <option disabled selected value="">Word Break</option>
+                    {
+                        wordbreak.map((font) => {
+                            return <option class={font} value={font}>{font}</option>
+                        })
+                    }
+                </select>
+            </div>
+    
+            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                    <option disabled selected value="">Content</option>
+                    {
+                        content.map((font) => {
+                            return <option class={font} value={font}>{font}</option>
+                        })
+                    }
+                </select>    
+            </div>
+    
+            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+            </div>
+        </div>
+
+       <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
+          <p class="text-2xl text-gray-400 dark:text-gray-500">
+             boton
+          </p>
+       </div>
+       
+    </div>
+ </div>
