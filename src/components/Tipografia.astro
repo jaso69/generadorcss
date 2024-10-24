@@ -23,6 +23,7 @@ import { verticalalign } from "../const/verticalalign";
 import { whitespace } from "../const/whitespace";
 import { wordbreak } from "../const/wordbreak";
 import { content } from "../const/content";
+
 ---
 
 <div class="p-4 sm:ml-64">
@@ -30,18 +31,7 @@ import { content } from "../const/content";
         <div class="grid grid-cols-4 gap-4 mb-4">
             
             <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-                <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
-                    <option disabled selected value="">Font Family</option>
-                    {
-                        fontfamily.map((font) => {
-                            return <option value={font}>{font}</option>
-                        })
-                    }
-                </select>
-            </div>
-
-            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-                <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                <select id="fontsize" class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
                     <option disabled selected value="">Font Size</option>
                     {
                         fontsize.map((font) => {
@@ -49,29 +39,41 @@ import { content } from "../const/content";
                         })
                     }
                 </select>
+                
             </div>
 
-
             <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-                <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
-                    <option disabled selected value="">Font Smoothing</option>
+                <select id="fontweight" class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                    <option disabled selected value="">Font Weight</option>
                     {
-                        fontsmoothing.map((font) => {
+                        fontweight.map((font) => {
                             return <option class={font} value={font}>{font}</option>
                         })
                     }
                 </select>
             </div>
 
+
             <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-                <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
-                    <option disabled selected value="">Font Style</option>
+                <select id="textcolor" class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                    <option disabled selected value="">Text Color</option>
                     {
-                        fontstyle.map((font) => {
+                        textcolor.map((font) => {
                             return <option class={font} value={font}>{font}</option>
                         })
                     }
-                </select>
+                </select>    
+            </div>
+
+            <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                <select id="textalign" class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                    <option disabled selected value="">Text Align</option>
+                    {
+                        textalign.map((font) => {
+                            return <option class={font} value={font}>{font}</option>
+                        })
+                    }
+                </select>    
             </div>
         </div>
 
@@ -79,13 +81,13 @@ import { content } from "../const/content";
             
         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
             <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
-                <option disabled selected value="">Font Weight</option>
+                <option disabled selected value="">Font Family</option>
                 {
-                    fontweight.map((font) => {
-                        return <option class={font} value={font}>{font}</option>
+                    fontfamily.map((font) => {
+                        return <option value={font}>{font}</option>
                     })
                 }
-            </select>
+            </select>    
         </div>
 
         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
@@ -147,9 +149,9 @@ import { content } from "../const/content";
     
             <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
                 <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
-                    <option disabled selected value="">Text Align</option>
+                    <option disabled selected value="">Font Style</option>
                     {
-                        textalign.map((font) => {
+                        fontstyle.map((font) => {
                             return <option class={font} value={font}>{font}</option>
                         })
                     }
@@ -158,9 +160,9 @@ import { content } from "../const/content";
     
             <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
                 <select class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
-                    <option disabled selected value="">Text Color</option>
+                    <option disabled selected value="">Font Smoothing</option>
                     {
-                        textcolor.map((font) => {
+                        fontsmoothing.map((font) => {
                             return <option class={font} value={font}>{font}</option>
                         })
                     }
@@ -295,14 +297,92 @@ import { content } from "../const/content";
             </div>
     
             <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+                <select id="theme" class="block px-4 py-2 dark:bg-blue-600 rounded-xl hover:bg-gray-100 dark:hover:bg-blue-950 dark:hover:text-white">
+                    <option value="dark">Dark</option>
+                    <option value="light">Light</option>
+                </select> 
             </div>
         </div>
 
-       <div class="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-          <p class="text-2xl text-gray-400 dark:text-gray-500">
+       <div id="boton" class="flex items-center justify-center h-48 mb-4 rounded">
+          <p id="texto">
              boton
           </p>
        </div>
        
     </div>
  </div>
+
+ <script>
+    import { claseState, themeState } from '../stores/class';
+    import { theme, boton, texto, fontsize, fontweight, textcolor, textalign } from '../element/tipografiaEle';
+    import type { Fontsize, Fontweight, Textcolor, Textalign } from '../interfaces/tipografia';
+
+    let clase: string
+    let control: any[] = []
+
+    if(themeState.value === ''){ themeState.set('dark') }
+    setTheme(themeState.value)
+
+    theme.addEventListener('change', () => {
+        setTheme(theme.value)
+        themeState.set(theme.value)
+    });
+
+    function setTheme(theme: string) {
+        if (theme === 'light') {
+            boton.classList.add('bg-gray-100', 'text-black');
+            boton.classList.remove('bg-gray-900', 'text-white');
+        } else {
+            boton.classList.add('bg-gray-900', 'text-white');
+            boton.classList.remove('bg-gray-100', 'text-black');
+        }
+    }
+
+    function addclass(sel : string) {
+        texto.classList.add(sel);
+        clase = texto.classList.value
+        claseState.set(clase)
+    }
+
+    textalign.addEventListener('change', () => {
+        const select: string = textalign.value
+        const value: Textalign = { 'textalign': select }
+        control.map((font) => {
+            if(font.textalign) texto.classList.remove(font.textalign)
+        })
+        addclass(select)
+        control.push(value)
+    });
+
+    textcolor.addEventListener('change', () => {
+        const select: string = textcolor.value
+        const value: Textcolor = { 'textcolor': select }
+        control.map((font) => {
+            if(font.textcolor) texto.classList.remove(font.textcolor)
+        })
+        addclass(select)
+        control.push(value)
+    });
+
+    fontweight.addEventListener('change', () => {
+        const select: string = fontweight.value
+        const value: Fontweight = { 'fontweight': select }
+        control.map((font) => {
+            if(font.fontweight) texto.classList.remove(font.fontweight)
+        })
+        addclass(select)
+        control.push(value)
+    });
+
+    fontsize.addEventListener('change', () => {
+        const select: string = fontsize.value
+        const value: Fontsize = { 'fontsize': select }
+        control.map((font) => {
+            if(font.fontsize) texto.classList.remove(font.fontsize)
+        })
+        addclass(select)
+        control.push(value)
+    });
+
+ </script>
